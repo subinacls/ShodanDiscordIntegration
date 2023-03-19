@@ -185,8 +185,8 @@ class DiscordWebhookSender:
             if verbose: print("\t[send_message] Message sent successfully.")
             current_time = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
             if verbose: print("\t[send_message] Timestamp: {}".format(current_time))
-            if verbose: print("\t[send_message] Sleeping for '60' seconds")
-            time.sleep(60)
+            if verbose: print("\t[send_message] Sleeping for 5 min.")
+            time.sleep(60 * 5)
             shodan_query.init_query()
         else:
             if verbose: print("\t[send_message] Message was UNSUCCESSFUL, waiting 60 seconds, attempting again")
